@@ -1,24 +1,3 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+[Rails7でさくっとWebSocketする](https://zenn.dev/seita1996/articles/rails7-actioncable#controller%E3%81%A8view%E3%82%92%E6%A7%8B%E7%AF%89%E3%81%99%E3%82%8B)を参考にチャットアプリの雛形を作成した。
