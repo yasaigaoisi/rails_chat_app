@@ -23,11 +23,20 @@ const appRoom = consumer.subscriptions.create("RoomChannel", {
   }
 });
 
-window.document.onkeydown = function(event) {
-  if(event.key == 'Enter') {
-    console.log("entered")
-    appRoom.speak(event.target.value);
-    event.target.value = '';
-    event.preventDefault();
+
+const submitButton = document.getElementById('message-submit')
+const inputField = document.getElementById('input-field');
+submitButton.addEventListener('click', function(event){
+  event.preventDefault(); // フォームの送信処理を防ぐ
+
+  const message = inputField.value.trim();
+  if (message !== '') {
+    appRoom.speak(message);
+    inputField.value = '';
   }
-}
+});
+inputField.addEventListener('keydown', function(event){
+  if (event.key === 'Enter') {
+    event.preventDefault(); // フォームの送信処理を防ぐ
+  }
+});
